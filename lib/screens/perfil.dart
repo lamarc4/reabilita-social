@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../utils/colors.dart';
 import '../widgets/header.dart';
 
-class HomeScreen extends StatelessWidget {
+class PerfilScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,31 +19,8 @@ class HomeScreen extends StatelessWidget {
                 notificationCount: 3,
               ),
               const SizedBox(height: 16),
-              const Align(
-                alignment: Alignment.centerLeft,
-                child: const Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Bem-Vindo,',
-                      style: TextStyle(
-                        fontSize: 28,
-                        fontWeight: FontWeight.normal,
-                      ),
-                    ),
-                    Text(
-                      'Beatriz!',
-                      style: TextStyle(
-                        fontSize: 28,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 16),
               const Text(
-                'Ferramentas de auxílio',
+                'Meu Perfil',
                 style: TextStyle(
                   fontSize: 18,
                   fontFamily: 'Poppins',
@@ -51,51 +28,20 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
-              Container(
-                padding: const EdgeInsets.all(22),
-                decoration: BoxDecoration(
-                  color: AppColors.bege,
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Suporte ao Usuário',
-                          style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'Poppins',
-                            color: AppColors.preto1,
-                          ),
-                        ),
-                        SizedBox(height: 8),
-                        Text(
-                          'Referências, legislações,\ninformações e muito mais',
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontFamily: 'Poppins',
-                            color: AppColors.preto1,
-                          ),
-                        ),
-                        SizedBox(height: 8),
-                        Text(
-                          'Conferir  ➔',
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.bold,
-                            color: AppColors.verde1,
-                          ),
-                        ),
-                      ],
+              Row(
+                children: [
+                  Icon(
+                    Icons.account_circle,
+                    size: 40.0,
+                  ),
+                  SizedBox(width: 8.0),
+                  Text(
+                    'Editar Perfil',
+                    style: TextStyle(
+                      fontSize: 20.0,
                     ),
-                    Icon(Icons.flag, color: AppColors.preto1, size: 48),
-                  ],
-                ),
+                  ),
+                ],
               ),
               const SizedBox(height: 16),
               Container(

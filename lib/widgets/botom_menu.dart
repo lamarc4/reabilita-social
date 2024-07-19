@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:reabilita_social/screens/evolucao.dart';
 import 'package:reabilita_social/screens/home.dart';
 import 'package:reabilita_social/screens/login.dart';
+import 'package:reabilita_social/screens/perfil.dart';
+import 'package:reabilita_social/screens/projetos.dart';
 import 'package:reabilita_social/utils/colors.dart';
 
 class BotomMenu extends StatefulWidget {
@@ -12,9 +15,9 @@ class _BotomMenuState extends State<BotomMenu> {
   int _currentIndex = 0;
   final List<Widget> _screens = [
     HomeScreen(),
-    LoginScreen(),
-    LoginScreen(),
-    LoginScreen(),
+    ProjetoScreen(),
+    EvolucaoScreen(),
+    PerfilScreen(),
   ];
 
   @override

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:reabilita_social/screens/home.dart';
+import 'package:reabilita_social/screens/login.dart';
+import 'package:reabilita_social/screens/paciente.dart';
 import '../utils/colors.dart';
 import '../widgets/header.dart';
 
@@ -22,19 +25,18 @@ class PerfilScreen extends StatelessWidget {
               const Text(
                 'Meu Perfil',
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 20,
                   fontFamily: 'Poppins',
                   color: AppColors.preto1,
                 ),
               ),
-              const SizedBox(height: 16),
-              Row(
+              const SizedBox(height: 30),
+              const Row(
                 children: [
-                  Icon(
-                    Icons.account_circle,
-                    size: 40.0,
+                  const Icon(Icons.account_circle, size: 36),
+                  SizedBox(
+                    width: 10,
                   ),
-                  SizedBox(width: 8.0),
                   Text(
                     'Editar Perfil',
                     style: TextStyle(
@@ -43,77 +45,83 @@ class PerfilScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 16),
-              Container(
-                padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(8),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.1),
-                      spreadRadius: 2,
-                      blurRadius: 10,
-                      offset: const Offset(0, 5),
+              const Divider(),
+              const SizedBox(height: 10),
+              const Row(
+                children: [
+                  const Icon(Icons.settings, size: 36),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    'Configuraçoes e Privacidade',
+                    style: TextStyle(
+                      fontSize: 20.0,
                     ),
-                  ],
-                ),
-                child: const Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(width: 8),
-                    Expanded(
-                      child: const Text(
-                        '“Permeando projetos de vida com sentidos e significados construídos no habitat, rede social e trabalho”',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontFamily: 'Poppins',
-                          color: AppColors.cinza1,
+                  ),
+                ],
+              ),
+              const Divider(),
+              const SizedBox(height: 10),
+              const Row(
+                children: [
+                  const Icon(Icons.help_rounded, size: 36),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    'Ajuda e Suporte',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                    ),
+                  ),
+                ],
+              ),
+              const Divider(),
+              const SizedBox(height: 10),
+              const Row(
+                children: [
+                  const Icon(Icons.document_scanner, size: 36),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    'Termos de Uso',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                    ),
+                  ),
+                ],
+              ),
+              InkWell(
+                onTap: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => LoginScreen()));
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: AppColors.preto1),
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.exit_to_app_rounded,
+                          color: Colors.white,
                         ),
-                      ),
+                        SizedBox(width: 10),
+                        Text(
+                          'Sair',
+                          style: TextStyle(fontSize: 20, color: Colors.white),
+                        )
+                      ],
                     ),
-                    SizedBox(width: 10),
-                    Icon(
-                      Icons.format_quote,
-                      color: AppColors.bege,
-                      size: 48,
-                    ),
-                  ],
+                  ),
                 ),
-              ),
-              const SizedBox(height: 16),
-              const Text(
-                'Reabilitação Psicossocial',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontFamily: 'Poppins',
-                  color: AppColors.preto1,
-                ),
-              ),
-              const SizedBox(height: 16),
-              Container(
-                height: 120,
-                padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: AppColors.verde1,
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Como realizar um Projeto\nde Reabilitação Psicossocial?',
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w500,
-                        color: Colors.white,
-                      ),
-                    ),
-                    Icon(Icons.spa, color: AppColors.verde2, size: 58),
-                  ],
-                ),
-              ),
+              )
             ],
           ),
         ),

@@ -31,6 +31,7 @@ class EvolucaoScreen extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               CardEvolucao(),
+              CardEvolucao(),
               const SizedBox(height: 16),
             ],
           ),

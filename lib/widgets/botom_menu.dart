@@ -40,7 +40,7 @@ class _BotomMenuState extends State<BotomMenu> {
             backgroundColor: Colors.white,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.group,
+            icon: Icon(Icons.people_alt_rounded,
                 color:
                     _currentIndex == 1 ? AppColors.verde1 : AppColors.cinza1),
             label: 'Projetos',
